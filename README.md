@@ -15,23 +15,31 @@ let container = document.getElementById("containerStyleMine");
 // Manipulating classes
 square.classList.remove(...bootstrapColors);
 square.classList.add(randomColor);
-3. Event Handling:
+
+2. Event Handling:
 // Arrow functions in event listeners
 button.addEventListener("click", () => changeColor(bootstrapColors));
 button.addEventListener("click", () => changeFlexPosition(boostrapFlex));
-4. Arrays & Random Selection:
+
+3. Arrays & Random Selection:
 const bootstrapColors = ["bg-primary", "bg-secondary", "bg-success", ...];
 const boostrapFlex = ["justify-content-start", "justify-content-center", "justify-content-end"];
 // Random array element selection
 const randomColor = bootstrapColors[Math.floor(Math.random() * bootstrapColors.length)];
-5. Destructuring with Spread Operator (...):
+
+4. Destructuring with Spread Operator (...):
+// Python *args equivalent - unpacks array into individual arguments
+square.classList.remove(...bootstrapColors);
+// This is equivalent to:
+// square.classList.remove("bg-primary", "bg-secondary", "bg-success", ...)
+
+5. Array Methods:
 let color = ["bg-example"];
 color.splice(0, 1, randomColor); // Replace element at index 0
-6. Array Methods:
-7. Function Parameters & Scope:
+
+6. Function Parameters & Scope:
 function changeColor(bootstrapColors) { // Parameter passing
 function changeFlexPosition(boostrapFlex) { // Function organization
-
 
 Technical Observations:
 ✅ Proper use of const for arrays
